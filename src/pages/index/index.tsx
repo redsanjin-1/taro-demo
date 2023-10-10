@@ -1,22 +1,22 @@
-import { Component, PropsWithChildren } from 'react'
-import { View, Text } from '@tarojs/components'
-import './index.less'
+import { Component, PropsWithChildren } from "react";
+import { View, Text } from "@tarojs/components";
+import "./index.less";
 
 export default class Index extends Component<PropsWithChildren> {
+  componentDidMount() {}
 
-  componentDidMount () { }
+  componentWillUnmount() {}
 
-  componentWillUnmount () { }
+  componentDidShow() {}
 
-  componentDidShow () { }
+  componentDidHide() {}
 
-  componentDidHide () { }
-
-  render () {
+  render() {
     return (
-      <View className='index'>
+      <View className="index">
+        <Text>我服了，不是吧，下载依赖花了100年</Text>
         <Text>Hello world!</Text>
       </View>
-    )
+    );
   }
 }

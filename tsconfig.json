@@ -18,9 +18,11 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "@": ["./src"],
+      "@/assets": ["./src/assets"]
+    }
   },
   "include": ["./src", "./types"],
   "compileOnSave": false

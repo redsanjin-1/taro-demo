@@ -1,22 +1,21 @@
-import { Component, PropsWithChildren } from "react";
-import { View, Text } from "@tarojs/components";
-import "./index.less";
+import { View } from '@tarojs/components';
+import { useState } from 'react';
+import { Slider } from './Slider';
+import './index.less';
 
-export default class Index extends Component<PropsWithChildren> {
-  componentDidMount() {}
+const Index = () => {
+  const [value, setValue] = useState(0);
 
-  componentWillUnmount() {}
-
-  componentDidShow() {}
-
-  componentDidHide() {}
-
-  render() {
-    return (
-      <View className="index">
-        <Text>我服了，不是吧，下载依赖花了100年</Text>
-        <Text>Hello world!</Text>
-      </View>
-    );
-  }
-}
+  return (
+    <View className="container">
+      <View>value === {value}</View>
+      <Slider
+        value={value}
+        onChange={(e) => {
+          setValue(e);
+        }}
+      ></Slider>
+    </View>
+  );
+};
+export default Index;

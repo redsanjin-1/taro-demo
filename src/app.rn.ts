@@ -13,4 +13,5 @@ class App extends Component<PropsWithChildren> {
     return this.props.children;
   }
 }
+
 export default App;

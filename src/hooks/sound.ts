@@ -8,7 +8,7 @@ export const useSound = (source: AVPlaybackSource) => {
     if (!source) return;
     const { sound: playBackObj } = await Audio.Sound.createAsync(source);
 
-    console.log('playBackObj', playBackObj);
+    // console.log('playBackObj', playBackObj);
     setSound(playBackObj);
     await sound?.playAsync();
   };
